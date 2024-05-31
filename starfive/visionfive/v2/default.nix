@@ -8,8 +8,7 @@
       inherit (config.boot) kernelPatches;
     });
 
-    kernelParams =
-      lib.mkDefault [ "console=tty0" "console=ttyS0,115200n8" "earlycon=sbi" ];
+    kernelParams = [ "console=tty0" "console=ttyS0,115200n8" "earlycon=sbi" ];
 
     initrd.availableKernelModules = [ "dw_mmc_starfive" ];
 
